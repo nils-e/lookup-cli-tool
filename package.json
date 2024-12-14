@@ -1,0 +1,16 @@
+{
+  "name": "lookup-cli",
+  "version": "1.0.0",
+  "description": "A command-line tool to lookup fields for a given name in a YAML file.",
+  "main": "lookup-cli.js",
+  "scripts": {
+    "start": "node lookup-cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  }
+}
