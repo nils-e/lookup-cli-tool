@@ -13,5 +13,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Build the TypeScript code
+RUN npm run build
+
 # Specify the command to run the script
-CMD ["node", "lookup-cli.js"]
+CMD ["node", "dist/lookup-cli.js"]
