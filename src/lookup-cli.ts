@@ -1,12 +1,19 @@
-const fs = require('fs');
-const yaml = require('js-yaml');
-const { Command } = require('commander');
+import * as fs from 'fs';
+import * as yaml from 'js-yaml';
+import { Command } from 'commander';
 const program = new Command();
 
-function readYAMLFile(filePath) {
+interface YAMLData {
+  name: string;
+  age?: number;
+  occupation?: string;
+  [key: string]: any;
+}
+
+function readYAMLFile(filePath: string): YAMLData[] {
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    return yaml.load(fileContents);
+    return yaml.load(fileContents) as YAMLData[];
   } catch (e) {
     if (e.code === 'ENOENT') {
       console.error('Error: YAML file not found at the specified location. Please check the file path and try again.');
@@ -19,7 +26,7 @@ function readYAMLFile(filePath) {
 
 program
   .arguments('<name> <output_field>')
-  .action((name, outputField) => {
+  .action((name: string, outputField: string) => {
     const data = readYAMLFile('data.yaml');
     const nameLower = name.toLowerCase();
     const outputFieldLower = outputField.toLowerCase();

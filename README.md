@@ -57,7 +57,7 @@ To run the `lookup-cli` script, follow these steps:
 
 2. Run the script with the required parameters:
    ```
-   node lookup-cli.js <name> <output_field>
+   node dist/lookup-cli.js <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
