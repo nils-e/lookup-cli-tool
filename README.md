@@ -19,19 +19,19 @@ This command-line tool looks up a specified field for a given name in a YAML fil
 ## Example Usage
 
 ```bash
-$ lookup-cli Alice age
+$ node dist/lookup-cli.js Alice age
 18
 
-$ lookup-cli Bob occupation
+$ node dist/lookup-cli.js Bob occupation
 unemployed
 
-$ lookup-cli Charlie occupation
+$ node dist/lookup-cli.js Charlie occupation
 Field 'occupation' not found for 'Charlie'. Available fields: 'name', 'age'.
 
-$ lookup-cli Eve age
+$ node dist/lookup-cli.js Eve age
 Name not found
 
-$ lookup-cli
+$ node dist/lookup-cli.js
 Usage: lookup-cli <name> <output_field>
 ```
 
@@ -46,6 +46,27 @@ This project uses `nvm` (Node Version Manager) to manage Node.js versions. To se
    nvm use
    ```
 
+## TypeScript Setup
+
+This project uses TypeScript. To set up TypeScript for this project, follow these steps:
+
+1. Install TypeScript as a development dependency:
+   ```
+   npm install --save-dev typescript
+   ```
+
+2. Compile the TypeScript files:
+   ```
+   npx tsc
+   ```
+
+3. Run the compiled JavaScript files:
+   ```
+   node dist/lookup-cli.js <name> <output_field>
+   ```
+
+Replace `<name>` and `<output_field>` with the appropriate values.
+
 ## Running the script
 
 To run the `lookup-cli` script, follow these steps:
@@ -58,6 +79,22 @@ To run the `lookup-cli` script, follow these steps:
 2. Run the script with the required parameters:
    ```
    node dist/lookup-cli.js <name> <output_field>
+   ```
+
+Replace `<name>` and `<output_field>` with the appropriate values.
+
+## Running the script with ts-node
+
+To run the `lookup-cli` script directly from the TypeScript files using `ts-node`, follow these steps:
+
+1. Install the project dependencies:
+   ```
+   npm install
+   ```
+
+2. Run the script with the required parameters:
+   ```
+   npx ts-node src/lookup-cli.ts <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
@@ -77,3 +114,21 @@ To run the `lookup-cli` script in a Docker container, follow these steps:
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
+
+## Running Tests
+
+To run the tests for this project, follow these steps:
+
+1. Install the development dependencies:
+   ```
+   npm install
+   ```
+
+2. Run the tests using the following command:
+   ```
+   npm test
+   ```
+
+3. Interpret the test results:
+   - If all tests pass, you will see a message indicating that the tests were successful.
+   - If any tests fail, you will see error messages indicating which tests failed and why.
