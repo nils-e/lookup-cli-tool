@@ -26,7 +26,7 @@ $ node dist/lookup-cli.js Bob occupation
 unemployed
 
 $ node dist/lookup-cli.js Charlie occupation
-Field 'occupation' not found for 'Charlie'. Available fields: 'name', 'age'.
+Field not found
 
 $ node dist/lookup-cli.js Eve age
 Name not found
@@ -94,7 +94,7 @@ To run the `lookup-cli` script directly from the TypeScript files using `ts-node
 
 2. Run the script with the required parameters:
    ```
-   npx ts-node src/lookup-cli.ts <name> <output_field>
+   npx tsx src/lookup-cli.ts <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
@@ -110,7 +110,7 @@ To run the `lookup-cli` script in a Docker container, follow these steps:
 
 2. Run the Docker container:
    ```
-   docker run --rm -v $(pwd):/usr/src/app lookup-cli <name> <output_field>
+   docker run --rm lookup-cli <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.

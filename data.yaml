@@ -1,0 +1,14 @@
+- name: Alice
+  age: 18
+  occupation: student
+- name: Bob
+  age: 33
+  occupation: unemployed
+- name: Charlie
+  age: 65
+- name: David
+  age: 25
+  occupation: software engineer
+- name: Alice
+  age: 20
+  occupation: intern
