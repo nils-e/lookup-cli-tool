@@ -128,7 +128,3 @@ To run the tests for this project, follow these steps:
    ```
    npm test
    ```
-
-3. Interpret the test results:
-   - If all tests pass, you will see a message indicating that the tests were successful.
-   - If any tests fail, you will see error messages indicating which tests failed and why.
