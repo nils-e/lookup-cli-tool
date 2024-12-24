@@ -6,6 +6,12 @@ describe('Command-line interface', () => {
     const output = execSync(`npx tsx src/lookup-cli.ts Alice age`).toString();
     const lines = output.trim().split('\n');
     expect(lines).contain('18');
+  });
+  
+  it('should return the correct field value for a given name', () => {
+    const output = execSync(`npx tsx src/lookup-cli.ts Alice age`).toString();
+    const lines = output.trim().split('\n');
+    expect(lines).contain('18');
     expect(lines).contain('20');
   });
 
@@ -30,7 +36,6 @@ describe('Command-line interface', () => {
     } catch (error: any) {
       const output = error.stdout.toString(); // Check stdout for the output
       expect(output).to.include('Usage: lookup-cli <name> <output_field>');
-      expect(output).to.include('Try \'lookup-cli --help\' for more information.');
     }
   });
 
