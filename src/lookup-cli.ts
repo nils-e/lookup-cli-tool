@@ -14,10 +14,10 @@ interface YAMLData {
 /**
  * Reads and parses a YAML file from the given file path.
  *
- * @param {string} filePath - The path to the YAML file to read.
- * @returns {YAMLData[]} - An array of parsed YAML data objects.
- * @throws {Error} - If the file is not found or cannot be read.
- * @throws {Error} - If the YAML file is improperly formatted.
+ * @param filePath - The path to the YAML file to read.
+ * @returns - An array of parsed YAML data objects.
+ * @throws - If the file is not found or cannot be read.
+ * @throws - If the YAML file is improperly formatted.
  *
  * @example
  * // Example usage:
@@ -41,8 +41,8 @@ export const readYAMLFile = (filePath: string): YAMLData[] => {
 /**
  * Type guard to check if a given error is a `NodeJS.ErrnoException`.
  *
- * @param {unknown} error - The value to check.
- * @returns {error is NodeJS.ErrnoException} - `true` if the error is a `NodeJS.ErrnoException`, otherwise `false`.
+ * @param error - The value to check.
+ * @returns - `true` if the error is a `NodeJS.ErrnoException`, otherwise `false`.
  */
 const isError = (error: unknown): error is NodeJS.ErrnoException => {
   return error instanceof Error && 'code' in error;
@@ -51,7 +51,7 @@ const isError = (error: unknown): error is NodeJS.ErrnoException => {
 /**
  * Displays the help message for the `lookup-cli` tool.
  *
- * @returns {void} - This function does not return a value.
+ * @returns - This function does not return a value.
  */
 const helpMessage = () => {
   console.log(`
