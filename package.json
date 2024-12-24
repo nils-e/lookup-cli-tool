@@ -5,8 +5,10 @@
   "main": "dist/lookup-cli.js",
   "scripts": {
     "build": "tsc && ls -al dist",
+    "build:docker": "docker build -t lookup-cli .",
     "start": "node dist/lookup-cli.js",
-    "start:ts": "npx tsx src/lookup-cli.ts",
+    "start:ts": "tsx src/lookup-cli.ts",
+    "start:docker": "docker run --rm lookup-cli",
     "test": "mocha"
   },
   "keywords": [],

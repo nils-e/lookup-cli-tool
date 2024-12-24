@@ -52,17 +52,17 @@ This project uses TypeScript. To set up TypeScript for this project, follow thes
 
 1. Install TypeScript as a development dependency:
    ```
-   npm install --save-dev typescript
+   npm install
    ```
 
 2. Compile the TypeScript files:
    ```
-   npx tsc
+   npm run build
    ```
 
 3. Run the compiled JavaScript files:
    ```
-   node dist/lookup-cli.js <name> <output_field>
+   npm run start <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
@@ -78,7 +78,7 @@ To run the `lookup-cli` script, follow these steps:
 
 2. Run the script with the required parameters:
    ```
-   node dist/lookup-cli.js <name> <output_field>
+   npm run start <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
@@ -94,7 +94,7 @@ To run the `lookup-cli` script directly from the TypeScript files using `ts-node
 
 2. Run the script with the required parameters:
    ```
-   npx tsx src/lookup-cli.ts <name> <output_field>
+   npm run start:ts <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
@@ -105,12 +105,12 @@ To run the `lookup-cli` script in a Docker container, follow these steps:
 
 1. Build the Docker image:
    ```
-   docker build -t lookup-cli .
+   npm run build:docker
    ```
 
 2. Run the Docker container:
    ```
-   docker run --rm lookup-cli <name> <output_field>
+   npm run start:docker <name> <output_field>
    ```
 
 Replace `<name>` and `<output_field>` with the appropriate values.
