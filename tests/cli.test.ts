@@ -8,7 +8,7 @@ describe('Command-line interface', () => {
     expect(lines).contain('18');
   });
   
-  it('should return the correct field value for a given name', () => {
+  it('should return the correct field value for a given name if there is multiple matching data matches', () => {
     const output = execSync(`npx tsx src/lookup-cli.ts Alice age`).toString();
     const lines = output.trim().split('\n');
     expect(lines).contain('18');
