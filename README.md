@@ -83,9 +83,9 @@ To run the `lookup-cli` script, follow these steps:
 
 Replace `<name>` and `<output_field>` with the appropriate values.
 
-## Running the script with ts-node
+## Running the script
 
-To run the `lookup-cli` script directly from the TypeScript files using `ts-node`, follow these steps:
+To run the `lookup-cli` script directly from the TypeScript files, follow these steps:
 
 1. Install the project dependencies:
    ```
